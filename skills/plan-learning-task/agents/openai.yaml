@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Learning Task"
+  short_description: "学習課題を小さく分解し、検証可能な実行計画へ整理する"
+  default_prompt: "Use $plan-learning-task to turn this learning goal into an executable plan."
