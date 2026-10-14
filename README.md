@@ -1,5 +1,31 @@
 # AI エージェント指示ファイル学習ラボ
 
+## 今回はここから：コードレビュー環境
+
+内容を忘れていても、[レビュー環境の作成・実習ガイド](docs/review-workshop.md)から再開できます。
+Pythonの専用教材で試し、自分のコードへ適用し、将来Cへ拡張する構成です。
+
+```bash
+python3 -m unittest discover -s tests -v
+codex --sandbox read-only
+```
+
+Codexで次の依頼を入力します。
+
+```text
+$review-source を使い、examples/review_python/spec.md を仕様として
+examples/review_python/buggy.py のみをレビューしてください。
+修正版・テスト・期待レビュー例は読まず、コードは変更しないでください。
+```
+
+- `.agents/skills/review-source/`：Codexが発見するレビュー手順。
+- `.codex/agents/source_reviewer.toml`：親から明示的に委譲するレビュー担当。
+- `examples/review_python/`：仕様、欠陥版、修正版、答え合わせ用の報告例。
+
+以下は従来の教材です。`skills/plan-learning-task/` は配置を学ぶサンプルで、
+現在のCodexのリポジトリSkill探索先ではありません。明示的にパスを渡して利用できます。
+`subagents/roles/` もプロンプト例であり、新しいエージェント設定とは区別してください。
+
 小さな Python CLI を題材に、次の4つを実際に変更・実行して学ぶサンプルプロジェクトです。
 
 - GitHub Copilot の指示: `.github/copilot-instructions.md`

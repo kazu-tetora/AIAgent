@@ -1,0 +1,4 @@
+interface:
+  display_name: "ソースコードレビュー"
+  short_description: "Pythonから始める、欠陥と回帰を根拠付きで報告するソースコードレビュー"
+  default_prompt: "$review-source を使い、指定したソースコードを変更せずレビューしてください。"
